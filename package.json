@@ -1,4 +1,5 @@
 {
+  "homepage": "https://Raul-Lemelle.github.io/deploy_app_test_pipefy",
   "name": "sample-app-react",
   "private": true,
   "version": "0.0.0",
@@ -8,9 +9,11 @@
   },
   "scripts": {
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "start": "vite",
+    "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "glitch": {
     "projectType": "generated_static"
@@ -30,6 +33,7 @@
     "eslint-plugin-react": "^7.34.2",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
+    "gh-pages": "^6.2.0",
     "prettier": "3.3.3",
     "vite": "^5.3.5"
   }
